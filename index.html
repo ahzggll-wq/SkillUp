@@ -1,31 +1,229 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SkillUp</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#111827">
+<title>SkillUp</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #0b1020;
+  color: white;
+}
+
+.container {
+  max-width: 500px;
+  margin: auto;
+  padding: 22px 18px 40px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.logo span {
+  color: #60a5fa;
+}
+
+.profile {
+  background: #151d32;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.card {
+  background: #151d32;
+  border-radius: 22px;
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.2);
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.stat {
+  margin-bottom: 18px;
+}
+
+.stat:last-child {
+  margin-bottom: 0;
+}
+
+.stat-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.stat-name {
+  color: #dbe4f5;
+}
+
+.percent {
+  font-weight: 700;
+}
+
+.bar {
+  height: 9px;
+  background: #27324a;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #60a5fa, #818cf8);
+}
+
+.average .fill {
+  background: #64748b;
+}
+
+.average-text {
+  color: #94a3b8;
+  font-size: 13px;
+  margin-top: -8px;
+  margin-bottom: 18px;
+}
+
+.footer {
+  text-align: center;
+  color: #64748b;
+  font-size: 13px;
+  margin-top: 25px;
+}
+</style>
 </head>
+
 <body>
-  <h1>SkillUp</h1>
-  <h2>Показатели пользователя: Shoh</h2>
 
-  <p>Это мои показатели:</p>
+<div class="container">
 
-  <ul>
-    <li>Уровень: 14</li>
-    <li>Учёба: 75%</li>
-    <li>Английский язык: 70%</li>
-    <li>Программирование: 60%</li>
-    <li>Физическая активность: 80%</li>
-  </ul>
+  <div class="header">
+    <div class="logo">Skill<span>Up</span></div>
+    <div class="profile">Shoh</div>
+  </div>
 
-  <h3>Средние показатели обычного человека</h3>
+  <div class="card">
+    <div class="title">📊 Мои показатели</div>
 
-  <ul>
-    <li>Учёба: 60%</li>
-    <li>Английский язык: 45%</li>
-    <li>Программирование: 30%</li>
-    <li>Физическая активность: 65%</li>
-  </ul>
+    <div class="stat">
+      <div class="stat-top">
+        <span class="stat-name">Учёба</span>
+        <span class="percent">75%</span>
+      </div>
+      <div class="bar">
+        <div class="fill" style="width:75%"></div>
+      </div>
+    </div>
+
+    <div class="stat">
+      <div class="stat-top">
+        <span class="stat-name">Английский язык</span>
+        <span class="percent">70%</span>
+      </div>
+      <div class="bar">
+        <div class="fill" style="width:70%"></div>
+      </div>
+    </div>
+
+    <div class="stat">
+      <div class="stat-top">
+        <span class="stat-name">Программирование</span>
+        <span class="percent">60%</span>
+      </div>
+      <div class="bar">
+        <div class="fill" style="width:60%"></div>
+      </div>
+    </div>
+
+    <div class="stat">
+      <div class="stat-top">
+        <span class="stat-name">Физическая активность</span>
+        <span class="percent">80%</span>
+      </div>
+      <div class="bar">
+        <div class="fill" style="width:80%"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="card average">
+    <div class="title">📈 Средние показатели</div>
+
+    <div class="average-text">
+      Средние значения обычного человека
+    </div>
+
+    <div class="stat">
+      <div class="stat-top">
+        <span class="stat-name">Учёба</span>
+        <span class="percent">60%</span>
+      </div>
+      <div class="bar">
+        <div class="fill" style="width:60%"></div>
+      </div>
+    </div>
+
+    <div class="stat">
+      <div class="stat-top">
+        <span class="stat-name">Английский язык</span>
+        <span class="percent">45%</span>
+      </div>
+      <div class="bar">
+        <div class="fill" style="width:45%"></div>
+      </div>
+    </div>
+
+    <div class="stat">
+      <div class="stat-top">
+        <span class="stat-name">Программирование</span>
+        <span class="percent">30%</span>
+      </div>
+      <div class="bar">
+        <div class="fill" style="width:30%"></div>
+      </div>
+    </div>
+
+    <div class="stat">
+      <div class="stat-top">
+        <span class="stat-name">Физическая активность</span>
+        <span class="percent">65%</span>
+      </div>
+      <div class="bar">
+        <div class="fill" style="width:65%"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    SkillUp • Развивай свои навыки
+  </div>
+
+</div>
+
 </body>
 </html>
